@@ -24,5 +24,6 @@
  1.It uses high memory
  2.not allowed to store more than 16mb data
  3.The nesting of data in BSON(both storage and network)is limited you are not allowed to nest data more than 100 levels
+   BSON-->Binary java script object oriented notation
 
 
