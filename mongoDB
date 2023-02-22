@@ -9,6 +9,8 @@
    document
    collection---group of documents
 **ODM--->object document mapper --->MONGODB
+**ORM--->in sql
+
 
 **Features of MONGODB:-
   1.scheme-less
