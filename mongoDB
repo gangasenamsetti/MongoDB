@@ -1,0 +1,28 @@
+**mongod --version 
+**Database is a physical container for collections
+**In sql,data is stored in tables in format of files
+**In mongoDB,the data is stored in form of key value pair and stored in documents
+**We can get data from server through json
+**A mongodb server has typically multiple databases
+***MONGODB terms-
+   fields
+   document
+   collection---group of documents
+**ODM--->object document mapper --->MONGODB
+
+**Features of MONGODB:-
+  1.scheme-less
+  2.document-oriented
+  3.Indexing--->unique indentification given to documents and to fetch the data
+  4.Scalability-->horizantal scalability with help of sharding(that distributes data in multiple servers)
+  5.Replication--->when server is down and unable retrieve the data then we can get the data from another server
+                copy the data from one server to another
+  6.Aggregation-->allows to perform operations on grouped data and get single result
+  7.High performance
+
+**Disadvantages of mongodb
+ 1.It uses high memory
+ 2.not allowed to store more than 16mb data
+ 3.The nesting of data in BSON(both storage and network)is limited you are not allowed to nest data more than 100 levels
+
+
