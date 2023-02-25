@@ -28,4 +28,35 @@
  3.The nesting of data in BSON(both storage and network)is limited you are not allowed to nest data more than 100 levels
    BSON-->Binary java script object oriented notation
 
+**API--->Application program interface
+  pre defined code developed by some programmers
+
+**show dbs
+**use collectionname -->switches to that database (use BookStore)
+**use local -->switches to local
+**use command creates database without being present
+**show collections
+**cls--->for clearing the screen
+**help-->help command
+**INSERT MANY
+   db.Books.insertMany([{title:"varshi",Author:"varshi",Rating:7},{title:"Rev",Author:"rev",Rating:8}])
+**INSERT ONE
+   db.Books.insertOne({title:"ganga",Author:"you",rating:"9"})
+**db.Books.find() //return all data present in collection
+**FIND
+  db.Books.find({title:"ganga"})
+  db.Books.find({title:"ganga",Author:"you"})
+  db.Books.find({title:"ganga"},{title:1,Author:1}) //this gives only title and author fields remaining it willnot show
+  db.Books.find({},{title:1,Author:1}) //prints all with title and author field
+  db.Books.find()
+  db.Books.find({ _id: ObjectId("63fa34b02a82d9cb304755e4")}) //finding by id
+  db.Books.find().count()
+  db.Books.find({Author:"you"}).count()  //count of that particular author
+  db.Books.find().limit(2) //that prints first 2 documents
+  db.Books.find().sort({title:1}) //sorts in ascending order 
+  db.Books.find().sort({title:-1}) //sorting in descending order
+**UPDATE
+   db.books.updateOne({Rating:7},{$set: {Rating:9}}) //updates rating 9 to rating 10
+   db.Books.updateMany({},{$set: {Rating:10}}) //updates all rating to 10
+
 
