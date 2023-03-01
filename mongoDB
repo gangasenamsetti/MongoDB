@@ -58,5 +58,23 @@
 **UPDATE
    db.books.updateOne({Rating:7},{$set: {Rating:9}}) //updates rating 9 to rating 10
    db.Books.updateMany({},{$set: {Rating:10}}) //updates all rating to 10
+   **GREATER THAN AND LESS THAN (AND OPERATOR)
+   db.Books.find({Rating:{$gt:8}}) //prints rating  greater than to 8
+   db.Books.find({Rating:{$gte:8}}) //prints rating  greater than and eqaul to to 8
+   db.Books.find({Rating:{$lt:8}}) //[prints rating less than 8
+   db.Books.find({Rating:{$lte:8}})//prints rating less than equal to 8
+**OR OPERTAOR
+  db.Books.find({$or:[{Rating:4},{Rating:8},{Rating:10}]}) //fetches the data that contains rating 4 8 10
+  db.Books.find({$or:[{Rating:4},{Title:"ganga"}]}) //or returns if any one condition is true
+  db.Books.find({Rating:{$in:[7,8,10]}}) //fetches the documents who ratings are 7 8 10
+  db.Books.find({Rating:{$nin:[7,10]}})//fetch the documents who rating is not 7 and 10
+**ARRAY ELEMENTS OPERATIONS
+ db.Students.find({Marks:"10"})
+
+**DELETE
+  db.Books.deleteOne({ _id: ObjectId("63fa34b02a82d9cb304755e4")})
+   db.Books.deleteMany({Rating:7})
+
+   
 
 
